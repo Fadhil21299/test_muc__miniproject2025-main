@@ -12,7 +12,7 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <span>All Proposal</span>
-                    <!-- <a href="{{ url('proposal/create') }}" class="btn btn-primary btn-sm">Add New Proposal</a> -->
+                    <a href="{{ route('proposal.create') }}" class="btn btn-primary btn-sm">Add New Proposal</a>
                 </div>
                 <div class="card-body">
                     @if($proposals->count() > 0)

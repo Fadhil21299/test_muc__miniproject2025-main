@@ -62,3 +62,19 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Added modules (by this work)
+
+New modules and features added to this project:
+
+- Modules/Employees: Edit employee status UI and update logic (uses mysql_hrd connection)
+- Modules/Proposal: Create form and store logic for proposals (uses mysql_marketing connection)
+- Modules/Serviceused: New module — list with Proposal number, Service Name, Status badge, Timespent (hh:mm) calculation from timesheet; create/edit/delete supported.
+- Modules/Timesheet: New module — list of timesheet records with Date, Employee, Proposal Number, Service Name, Start/End time, Total Hours; create and delete supported.
+
+Routes:
+- /employees/index
+- /proposal/index
+- /serviceused/index
+- /timesheet/index
+

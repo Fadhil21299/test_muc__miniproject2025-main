@@ -30,7 +30,10 @@
                                         <tr>
                                             <td>{{ $employee->id }}</td>
                                             <td>{{ $employee->fullname ?? '-' }}</td>
-                                            <td>{{ $employee->status ?? '-' }}</td>
+                                                <td>{{ $employee->status ?? '-' }}</td>
+                                                <td>
+                                                    <a href="{{ route('employees.edit', $employee->id) }}" class="btn btn-sm btn-outline-primary">Edit status</a>
+                                                </td>
                                         </tr>
                                     @endforeach
                                 </tbody>

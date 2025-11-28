@@ -12,5 +12,10 @@ class ProposalModel extends Model
     protected $connection = 'mysql_marketing';
     protected $table = 'proposal'; // atau nama table yang sesuai
     
-    protected $fillable = [];
+    protected $fillable = [
+        'number',
+        'description',
+        'year',
+        'status'
+    ];
 }

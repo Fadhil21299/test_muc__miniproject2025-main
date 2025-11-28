@@ -11,5 +11,9 @@ class ServiceusedModel extends Model
     protected $connection = 'mysql_marketing';
     protected $table = 'serviceused'; // atau nama table yang sesuai
     
-    protected $fillable = [];
+    protected $fillable = [
+        'proposal_id',
+        'service_name',
+        'status'
+    ];
 }

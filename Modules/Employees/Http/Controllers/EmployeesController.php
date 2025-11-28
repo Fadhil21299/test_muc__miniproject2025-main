@@ -64,7 +64,12 @@ class EmployeesController extends Controller
      */
     public function edit($id)
     {
-        return view('employees::edit');
+        $employee = DB::connection('mysql_hrd')
+            ->table('employees')
+            ->where('id', $id)
+            ->first();
+
+        return view('employees::edit', compact('employee'));
     }
 
     /**
@@ -75,7 +80,16 @@ class EmployeesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'status' => 'required|in:active,inactive',
+        ]);
+
+        DB::connection('mysql_hrd')
+            ->table('employees')
+            ->where('id', $id)
+            ->update(['status' => $request->input('status'), 'updated_at' => now()]);
+
+        return redirect()->route('employees.index')->with('success', 'Employee status updated');
     }
 
     /**

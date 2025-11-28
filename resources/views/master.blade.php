@@ -83,11 +83,11 @@
                       <a class="page-scroll" href="{{ url('proposal/index') }}">Proposal</a>
                     </li>
                     <li class="nav-item">
-                      <a class="page-scroll" href="">Serviceused</a>
+                      <a class="page-scroll" href="{{ url('serviceused/index') }}">Serviceused</a>
                     </li>
 
                     <li class="nav-item">
-                      <a class="page-scroll" href="">Timesheet</a>
+                      <a class="page-scroll" href="{{ url('timesheet/index') }}">Timesheet</a>
                     </li>
                   </ul>
                 </div>
